@@ -130,28 +130,36 @@ namespace LanguageEssentials
             {
                 System.Console.WriteLine(newEntry.Key + " ++ " + newEntry.Value);
             }
+            System.Console.WriteLine("*******************************************");
 
+            int integerValue = 65;
+            double doubleValue = integerValue;
+            System.Console.WriteLine(doubleValue);
 
+            System.Console.WriteLine("*******************************************");
 
+            double dv = 3.14159265358;
+            System.Console.WriteLine(dv);
+            int iv = (int) dv;
+            System.Console.WriteLine(iv);
 
+            System.Console.WriteLine("*******************************************");
+            SayHello();
+            SayHello("daniel");
+            System.Console.WriteLine("*******************************************");
+            string greet;
+            greet = SayGreeting("tom");
+            System.Console.WriteLine(greet);
+            System.Console.WriteLine("*******************************************");
 
+        }
 
+        public static void  SayHello(string firstName = "system default name here"){
+            System.Console.WriteLine($"Hello {firstName} , how are you doing today?");
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        public static string SayGreeting(string firstName = "default name here") {
+            return $"This is the greeting, {firstName}, with a return value of string";
         }
         
     }
